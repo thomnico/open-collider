@@ -63,10 +63,6 @@ The contrast above is the claim. The rest of this README is how to get it on you
 
 OC runs as **brainstorm sessions** built from multiple **iterations**. Each iteration runs the four steps below and surfaces ~10-20 curated ideas for your ideation problem.
 
-<p align="center">
-  <img src="assets/diagrams/pipeline.png" alt="Open Collider pipeline: brief → domains → collide → curate, with a feedback loop" width="78%">
-</p>
-
 The four steps:
 
 1. **Brief.** Describe your ideation problem, what kinds of ideas you're looking for, what makes a good idea, and give the model **raw reference material** (texts, examples, samples of voice) so it has rich context about the problem. General-purpose, any ideation problem welcome.
