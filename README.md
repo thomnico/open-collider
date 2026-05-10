@@ -148,11 +148,11 @@ A 12-project benchmark tests Open Collider on two questions: *do the outputs rea
 
 OC's outputs (A) systematically sit further from the default-prompt cloud (B) than two falsifiers: instruction-only "be original" (C) and a length-matched deep brief with no cross-domain content (D).
 
-**A vs B passes 12/12 projects (p = 0.0002).** Both falsifiers also produce a measurable shift, but what the falsifiers *don't* match is the **amplitude**: A's effect size is roughly **4–13× larger than C** ("be original" instruction) and **3–4× larger than D** (length-matched deep brief). Direct pairwise checks confirm A is the strongest mover: A vs C passes 11/12 and A vs D passes 11/12 (both p ≤ .003). The geometric shift is real, embedding-family-independent, and not explained by either "be-original" instructions or longer briefs.
+**A vs B passes 12/12 projects (p = 0.0002).** Both falsifiers also produce a measurable shift, but what the falsifiers *don't* match is the **amplitude**: A's effect size is roughly **4–13× larger than C** ("be original" instruction) and **3–4× larger than D** (length-matched deep brief). Direct pairwise checks (BGE nn_in_B) confirm A is the strongest mover: A vs C passes 11/12 and A vs D passes 11/12 (both p ≤ .003). The geometric shift is real, embedding-family-independent, and not explained by either "be-original" instructions or longer briefs.
 
 ### Quality check (blind LLM-judge)
 
-Distance alone is not enough: higher embedding distance could simply mean the ideas are absurd or irrelevant. So a second test: **three independent LLM judges** (Claude Opus 4.6 + GPT-4o + Gemini 2.5), **4,320 blind pairwise verdicts** on the top-10 curated ideas of each condition, scored on two axes: *which is more original?* and *which is the better idea overall to pursue?*
+Distance alone is not enough: higher embedding distance could simply mean the ideas are absurd or irrelevant. So a second test: **three independent LLM judges** (Claude Opus 4.6 + GPT-4o + Gemini 2.5), **4,320 blind pairwise verdicts** on the top-10 curated ideas per 240-idea batch of each condition, scored on two axes: *which is more original?* and *which is the better idea overall to pursue?*
 
 <p align="center">
   <img src="assets/results/viz_panel12_judge_heatmap.png" alt="Per-project mean A_share across 3 judges, 6 contrasts × axes, panel of 12" width="88%">
@@ -179,7 +179,9 @@ projects/my_project/
 ├── brief_validated.json          # your problem definition
 ├── input_bank.yaml               # reference texts index + forbidden topics
 ├── project_config.yaml           # axis weights, strategy config, llm_backend
-├── prompts/idea_generation.md    # customizable generation prompt
+├── prompts/
+│   ├── idea_generation.md        # customizable generation prompt
+│   └── judge.md                  # scoring prompt (calibration examples)
 ├── texts/
 │   └── T01.txt, T02.txt …        # your reference texts
 └── brainstorms/

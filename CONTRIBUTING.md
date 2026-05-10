@@ -39,7 +39,7 @@ Both modes share the same prepare/parse layer:
 
 ## Guidelines
 
-- All code and content in English. Zero French.
+- All code and content in English. Zero French. **Exception**: the idea parser (`phases/idea_generator.py`) and score parser (`scoring/score_parser.py`) accept "Idée" / "Idee" headers as bilingual fallbacks for older runs, with corresponding test fixtures in `tests/test_smoke.py`. Do not extend the bilingual surface beyond these three files.
 - Axis weights are configurable per project (in `project_config.yaml`); axis names are fixed (5 axes defined in `src/open_collider/scoring/score_parser.py`). Changing axis names requires updating the parser, the scorer, and the judge prompt template together.
 - Keep base dependencies minimal (`pyyaml` only). API deps are optional (`pip install .[api]`).
 - The prepare/parse layer (`skill_interface.py`, strategies, phases) must never import from `llm/` or `brainstorm.py`. This keeps skill mode working without API deps.

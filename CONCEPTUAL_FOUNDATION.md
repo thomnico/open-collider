@@ -165,7 +165,7 @@ The geometric shift is real, embedding-family-independent, and not explained by 
 
 ### Quality check (blind LLM-judge)
 
-Distance alone is not enough. Higher embedding distance could mean the ideas are absurd or irrelevant. So a second test: three independent LLM judges (Claude Opus 4.6, GPT-4o, Gemini 2.5), 4,320 blind pairwise verdicts on the top-10 curated ideas of each condition.
+Distance alone is not enough. Higher embedding distance could mean the ideas are absurd or irrelevant. So a second test: three independent LLM judges (Claude Opus 4.6, GPT-4o, Gemini 2.5), 4,320 blind pairwise verdicts on the top-10 curated ideas per 240-idea batch of each condition.
 
 On `originality`, A consistently wins:
 

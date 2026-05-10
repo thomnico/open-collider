@@ -1,4 +1,4 @@
-"""Skill interface — prepare prompts and parse responses for Claude Code orchestration.
+"""Skill interface: prepare prompts and parse responses for Claude Code orchestration.
 
 The actual LLM calls are made by Claude Code (the skill), not by Python.
 """
@@ -430,7 +430,7 @@ def mark_curated(project_dir: str) -> None:
 
 
 def generate_iter_report(project_dir: str, iteration: int) -> str:
-    """Generate iter_NNN/ITER_REPORT.md — all curated ideas with their flags.
+    """Generate iter_NNN/ITER_REPORT.md: all curated ideas with their flags.
 
     Called after flags are applied. Shows every curated idea with its flag status.
     """
@@ -511,7 +511,7 @@ def generate_iter_report(project_dir: str, iteration: int) -> str:
 
 
 def generate_brainstorm_report(project_dir: str) -> str:
-    """Generate brainstorm_NNN/REPORT.md — aggregated across all iterations.
+    """Generate brainstorm_NNN/REPORT.md: aggregated across all iterations.
 
     Called when closing the session. Loved/liked ideas on top, trashed below.
     """
@@ -581,7 +581,7 @@ def generate_brainstorm_report(project_dir: str) -> str:
                 all_feedback.append((iter_cfg.get("iteration", "?"), fb_text))
 
     # Build report
-    lines = [f"# {project_path.name} — {brainstorm_dir.name}", ""]
+    lines = [f"# {project_path.name}: {brainstorm_dir.name}", ""]
     lines.append(f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     lines.append("")
 
@@ -670,7 +670,7 @@ def generate_brainstorm_report(project_dir: str) -> str:
 
 
 def generate_report(project_dir: str, state: dict | None = None) -> str:
-    """Backward-compatible wrapper — generates the brainstorm report."""
+    """Backward-compatible wrapper: generates the brainstorm report."""
     return generate_brainstorm_report(project_dir)
 
 

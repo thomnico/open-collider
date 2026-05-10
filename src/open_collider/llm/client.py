@@ -47,7 +47,7 @@ class LLMClient:
     ) -> str:
         """Single Anthropic API call with retry on overload.
 
-        - 5 retries on overloaded (3 min backoff each)
+        - Up to 5 total attempts on overloaded (4 retries, 3 min backoff each)
         - No retry on rate limit (raises immediately)
         - Streams for opus models (required by API for long requests)
         """
@@ -86,4 +86,4 @@ class LLMClient:
                     continue
                 raise LLMError(f"API error: {e}")
 
-        raise LLMError(f"Failed after {max_retries} retries")
+        raise LLMError(f"Failed after {max_retries} attempts")
