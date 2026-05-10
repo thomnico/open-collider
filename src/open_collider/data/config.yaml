@@ -1,0 +1,38 @@
+generic_pipeline:
+  # Models (Opus for domains where creativity matters, Sonnet for volume)
+  domain_model: "claude-opus-4-20250514"
+  generation_model: "claude-sonnet-4-20250514"
+  scoring_model: "claude-sonnet-4-20250514"
+
+  # Strategies
+  strategies:
+    fresh:
+      enabled: true
+      condition: "always"
+      combos: 12
+    deepen:
+      enabled: true
+      condition: "has_loved"
+      combos: 12
+    refresh:
+      enabled: true
+      condition: "has_loved_or_liked"
+      combos: 12
+  combos_first_iteration: 24
+
+  # Domain generation
+  n_sets: 12
+  n_domains_per_set: 5
+
+  # Idea generation
+  stratified_sampling: true
+  max_concurrent: 4             # Parallel idea generation (API mode)
+  max_concurrent_scoring: 3     # Parallel scoring batches (API mode)
+
+  # Scoring thresholds
+  score_threshold: 4.2
+  drift_threshold: 4.0
+  min_ideas_before_drift: 3
+  drift_step: 0.1
+  scoring_batch_size: 25
+  # Scoring axes are hardcoded in idea_scorer.py (5-axis layout matching judge.md)

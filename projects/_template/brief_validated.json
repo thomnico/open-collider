@@ -1,0 +1,7 @@
+{
+  "objective": "Describe the goal of your ideation project",
+  "context": "Describe the context in which the ideas will be used",
+  "constraints": "Describe the constraints to respect",
+  "what_makes_good_ideas": "Describe the structural qualities of the ideas you're looking for",
+  "forbidden_topics": []
+}

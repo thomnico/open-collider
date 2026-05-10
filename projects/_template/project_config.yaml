@@ -1,0 +1,12 @@
+# Scoring weights — axes are fixed (5 hardcoded), but weights are adjustable per project.
+# Uncomment and modify to override defaults (must sum to 1.0):
+# judge_axes:
+#   originality: 0.25
+#   resistance: 0.20
+#   thesis_density: 0.20
+#   concrete_grounding: 0.20
+#   cognitive_load: 0.15
+
+# Output format for generated ideas
+output_format: >
+  Each idea: 2-4 sentences. Free format.

@@ -1,0 +1,39 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.idea/
+.vscode/
+*.swp
+.env
+.DS_Store
+projects/*
+!projects/_template/
+graphify-out/
+CLAUDE.md
+
+# Internal-only docs (TODO, DECISIONS, OPEN-QUESTIONS, blog drafts, call prep, etc.)
+internal/
+
+# Research data (raw_datasets, experiments, intermediates) — clean_data has moved
+# to a separate repo (open-collider-research). Source data is too large + sensitive
+# to ship with the public OC code repo.
+research/
+internal/external/
+
+# README brand assets — HTML sources kept internal (PNG outputs are committed under assets/)
+_brand-readme/
+
+# Local scratch / iteration artifacts
+scratch/
+.claude/skills/
+RUN_SUMMARY_*.md
+_autoloop.py
+_curate_view.py
+_write_curated.py
+_decisions_*.json
+.git.bak/
