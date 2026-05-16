@@ -3,7 +3,7 @@
 </p>
 
 > **Built by [Cédric Lion](https://twitter.com/cdriclion) · [@oparine_ai](https://twitter.com/oparine_ai)**
-> Follow for AI creativity research updates · [Read the launch story](https://oparine.substack.com/)
+> Follow for AI creativity research updates · [Read the launch story](https://cdriclion.substack.com/p/why-direct-prompting-pushes-llms)
 
 # Open Collider
 
@@ -73,11 +73,11 @@ The way out is to inject material from somewhere the model wouldn't go on its ow
   <img src="assets/diagrams/09_escape_mediocrity.png" alt="Injecting distant points A and B: the collision zone escapes the high-density basin" width="40%">
 </p>
 
-<p align="center"><sub><i>Visual extracted from the <a href="https://oparine.substack.com/">foundational article</a>.</i></sub></p>
+<p align="center"><sub><i>Visual extracted from the <a href="https://cdriclion.substack.com/p/why-direct-prompting-pushes-llms">foundational article</a>.</i></sub></p>
 
 The intuition: a constellation of distant attractors stretches the prompt across low-density regions of idea space, where the model wouldn't go on its own. The collision zones, where these attractors' trajectories converge, are where non-trivial ideas can emerge.
 
-→ Full theory and rationale: **[The Open Collider foundational article](https://oparine.substack.com/)**.
+→ Full theory and rationale: **[The Open Collider foundational article](https://cdriclion.substack.com/p/why-direct-prompting-pushes-llms)**.
 
 ---
 
@@ -164,7 +164,7 @@ Distance alone is not enough: higher embedding distance could simply mean the id
 
 **On `best_overall`** (which is the better idea to pursue?), A ties or beats every baseline directionally (A vs B 9/12, mean 57%; A vs C 9/12, mean 59%; A vs D 7/12, mean 53%). The signal is weaker than originality, but never reverses: distant-domain collisions **don't sacrifice relevance** for novelty.
 
-→ Full long-form write-up, methodology, and one-click reproduction: **[The Open Collider foundational article](https://oparine.substack.com/)**.
+→ Full long-form write-up, methodology, and one-click reproduction: **[The Open Collider foundational article](https://cdriclion.substack.com/p/why-direct-prompting-pushes-llms)**.
 
 ---
 
@@ -224,7 +224,7 @@ Arthur Koestler's **bisociation** (1964): creativity comes from the collision of
 
 Open Collider is a methodical implementation of this principle, scaled by LLMs.
 
-→ Full conceptual framework (gravity wells in idea space, why distance matters, falsifiable claims): **[The Open Collider foundational article](https://oparine.substack.com/)**.
+→ Full conceptual framework (gravity wells in idea space, why distance matters, falsifiable claims): **[The Open Collider foundational article](https://cdriclion.substack.com/p/why-direct-prompting-pushes-llms)**.
 
 ---
 
